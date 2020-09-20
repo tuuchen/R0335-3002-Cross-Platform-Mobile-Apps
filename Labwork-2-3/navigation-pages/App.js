@@ -5,9 +5,9 @@ import * as React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import FirstPage from './pages/FirstPage'
-import SecondPage from './pages/SecondPage'
-import ThirdPage from './pages/ThirdPage'
+import { FirstPage, firstPageOptions } from './pages/FirstPage'
+import { SecondPage, secondPageOptions } from './pages/SecondPage'
+import { ThirdPage, thirdPageOptions } from './pages/ThirdPage'
 
 const Stack = createStackNavigator()
 
@@ -17,18 +17,18 @@ const App = () => {
       <Stack.Navigator initialRouteName="FirstPage">
         <Stack.Screen
           name="FirstPage"
-          component={FirstPage.Page}
-          options={FirstPage.options}
+          component={FirstPage}
+          options={firstPageOptions}
         />
         <Stack.Screen
           name="SecondPage"
-          component={SecondPage.Page}
-          options={SecondPage.options}
+          component={SecondPage}
+          options={secondPageOptions}
         />
         <Stack.Screen
           name="ThirdPage"
-          component={ThirdPage.Page}
-          options={ThirdPage.options}
+          component={ThirdPage}
+          options={thirdPageOptions}
         />
       </Stack.Navigator>
     </NavigationContainer>
