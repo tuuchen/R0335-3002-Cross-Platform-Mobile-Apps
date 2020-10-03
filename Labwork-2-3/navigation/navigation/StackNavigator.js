@@ -23,9 +23,10 @@ const HamburgerMenu = (props) => {
       <Image
         source={require("../assets/drawer.png")}
         style={{
+          marginTop: 2,
           marginLeft: 10,
-          width: 45,
-          height: 45,
+          width: 25,
+          height: 25,
           tintColor: "#1F73BD",
         }}
       />
@@ -41,9 +42,16 @@ const HomeStackNavigator = ({ navigation }) => {
         component={Home}
         options={{
           headerLeft: (props) => <HamburgerMenu {...navigation} />,
+          headerTitleAlign: "center",
         }}
       />
-      <Stack.Screen name="About" component={About} />
+      <Stack.Screen
+        name="About"
+        component={About}
+        options={{
+          headerTitleAlign: "center",
+        }}
+      />
     </Stack.Navigator>
   );
 };
@@ -56,6 +64,7 @@ const ContactStackNavigator = ({ navigation }) => {
         component={Contact}
         options={{
           headerLeft: (props) => <HamburgerMenu {...navigation} />,
+          headerTitleAlign: "center",
         }}
       />
     </Stack.Navigator>
