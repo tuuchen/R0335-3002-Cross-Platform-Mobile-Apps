@@ -34,9 +34,6 @@ const BottomTabNavigator = () => {
         activeTintColor: "#9AC4F8",
         inactiveTintColor: "gray",
       }}
-      listeners={{
-        tabPress: console.log("hello"),
-      }}
     >
       <Tab.Screen name="Home" component={HomeStackNavigator} />
       <Tab.Screen name="Contact" component={ContactStackNavigator} />
