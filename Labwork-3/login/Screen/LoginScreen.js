@@ -40,9 +40,6 @@ const LoginScreen = (props) => {
     }
     formBody = formBody.join('&')
 
-    // For web testing
-    // var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-
     fetch('https://aboutreact.herokuapp.com/login.php', {
       method: 'POST',
       body: formBody,
@@ -53,7 +50,6 @@ const LoginScreen = (props) => {
       .then((response) => response.json())
       .then((responseJson) => {
         setLoading(false)
-        console.log(responseJson)
         if (responseJson.status == 1) {
           AsyncStorage.setItem('user_id', responseJson.data[0].user_id)
           console.log(responseJson.data[0].user_id)
