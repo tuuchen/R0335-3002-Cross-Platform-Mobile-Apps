@@ -24,10 +24,10 @@ const Icons = (props) => {
 const BottomTabNavigator = () => {
   return (
     <Tab.Navigator
-      screenOptions={(navigation) => ({
+      screenOptions={(props) => ({
         tabBarIcon: (options) => {
-          const props = { ...navigation.route, ...options };
-          return <Icons {...props} />;
+          const newProps = { ...props.route, ...options };
+          return <Icons {...newProps} />;
         },
       })}
       tabBarOptions={{
