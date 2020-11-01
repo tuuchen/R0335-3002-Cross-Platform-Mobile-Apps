@@ -2,7 +2,6 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {HomeStackNavigator, ContactStackNavigator} from './StackNavigator';
 import Icon from 'react-native-vector-icons/Ionicons';
-// const myIcon = <Icon name="rocket" size={30} color="#900" />;
 
 const Tab = createBottomTabNavigator();
 
@@ -23,6 +22,7 @@ const Icons = (props) => {
 const BottomTabNavigator = () => {
   return (
     <Tab.Navigator
+      initialRouteName="Home"
       screenOptions={(props) => ({
         tabBarIcon: (options) => {
           const newProps = {...props.route, ...options};

@@ -1,13 +1,10 @@
 import React, {useContext} from 'react';
 import {Alert} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
-
 import Home from '../screens/Home';
 import About from '../screens/About';
 import Contact from '../screens/Contact';
-
-import {AuthContext} from '../navigation/AuthProvider';
-
+import {AuthContext} from '../auth/AuthProvider';
 import {Image, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -63,7 +60,12 @@ const LogOutButton = () => {
           {cancelable: false},
         );
       }}>
-      <Icon name="log-out-outline" size={30} />
+      <Icon
+        style={{marginRight: 10}}
+        name="log-out-outline"
+        size={30}
+        color="white"
+      />
     </TouchableOpacity>
   );
 };

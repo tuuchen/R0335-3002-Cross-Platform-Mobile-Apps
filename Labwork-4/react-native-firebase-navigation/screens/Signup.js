@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import {View, Text, TouchableOpacity, Image, StyleSheet} from 'react-native';
 import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
-import {AuthContext} from '../navigation/AuthProvider';
+import {AuthContext} from '../auth/AuthProvider';
 import SocialButton from '../components/SocialButton';
 
 const SignupScreen = ({navigation}) => {

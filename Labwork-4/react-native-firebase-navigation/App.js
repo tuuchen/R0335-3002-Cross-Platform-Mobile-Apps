@@ -1,5 +1,5 @@
 import React from 'react';
-import Providers from './navigation/';
+import Providers from './auth';
 
 const App = () => {
   return <Providers />;
